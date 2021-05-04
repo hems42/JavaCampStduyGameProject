@@ -1,4 +1,4 @@
-package JavaFxUserInterface;
+package UserInterface.JavaFxUI;
 
 public class WebSiteUI {
 

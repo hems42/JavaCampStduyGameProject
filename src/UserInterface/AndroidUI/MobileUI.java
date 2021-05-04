@@ -1,4 +1,4 @@
-package AndroidUserInterface;
+package UserInterface.AndroidUI;
 
 public class MobileUI {
 
