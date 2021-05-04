@@ -3,7 +3,7 @@ package Bussines.Concrete;
 import Bussines.Abstract.ICampaingService;
 
 import DataAccessLayer.Abstract.ICampaignDal;
-import Entities.Campaign;
+import Entities.Concrete.Campaign;
 import Logger.Abstract.BaseLogger;
 
 public class CampaignManager implements ICampaingService {

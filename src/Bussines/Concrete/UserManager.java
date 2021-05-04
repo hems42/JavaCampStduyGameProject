@@ -2,8 +2,7 @@ package Bussines.Concrete;
 
 import Bussines.Abstract.IUserService;
 import DataAccessLayer.Abstract.ICampaignDal;
-import Entities.Campaign;
-import Entities.User;
+import Entities.Concrete.User;
 import Logger.Abstract.BaseLogger;
 
 public class UserManager implements IUserService {

@@ -1,7 +1,7 @@
 package DataAccessLayer.Hibernate;
 
 import DataAccessLayer.Abstract.ICampaignDal;
-import Entities.Campaign;
+import Entities.Concrete.Campaign;
 
 public class HibernateCampaingDal implements ICampaignDal {
 

@@ -2,8 +2,7 @@ package Bussines.Concrete;
 
 import Bussines.Abstract.IGameService;
 import DataAccessLayer.Abstract.IGameDal;
-import Entities.Campaign;
-import Entities.Game;
+import Entities.Concrete.Game;
 import Logger.Abstract.BaseLogger;
 
 public class GameManager implements IGameService {

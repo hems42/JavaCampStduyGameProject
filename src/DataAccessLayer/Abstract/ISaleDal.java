@@ -1,6 +1,6 @@
 package DataAccessLayer.Abstract;
 
-import Entities.Sale;
+import Entities.Concrete.Sale;
 
 public interface ISaleDal extends ICrudDal<Sale>{
 }

@@ -1,8 +1,8 @@
 package DataAccessLayer.Hibernate;
 
 import DataAccessLayer.Abstract.IGameDal;
-import Entities.Campaign;
-import Entities.Game;
+import Entities.Concrete.Campaign;
+import Entities.Concrete.Game;
 
 public class HibernateGameDal implements IGameDal {
     @Override

@@ -2,8 +2,7 @@ package Bussines.Concrete;
 
 import Bussines.Abstract.ISaleService;
 import DataAccessLayer.Abstract.ICampaignDal;
-import Entities.Game;
-import Entities.Sale;
+import Entities.Concrete.Sale;
 import Logger.Abstract.BaseLogger;
 
 public class SaleManager implements ISaleService {

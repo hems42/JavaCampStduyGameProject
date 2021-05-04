@@ -1,7 +1,7 @@
 package DataAccessLayer.Hibernate;
 
 import DataAccessLayer.Abstract.IUserDal;
-import Entities.User;
+import Entities.Concrete.User;
 
 public class HibernateUserDal implements IUserDal {
     @Override

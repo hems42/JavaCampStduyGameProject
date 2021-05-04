@@ -1,6 +1,6 @@
 package Bussines.Abstract;
 
-import Entities.Game;
+import Entities.Concrete.Game;
 
 public interface IGameService extends ICrudService<Game>{
 }

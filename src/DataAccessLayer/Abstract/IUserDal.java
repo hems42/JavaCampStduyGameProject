@@ -1,6 +1,6 @@
 package DataAccessLayer.Abstract;
 
-import Entities.User;
+import Entities.Concrete.User;
 
 public interface IUserDal extends ICrudDal<User>{
 }

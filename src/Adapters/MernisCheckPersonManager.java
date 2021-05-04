@@ -1,7 +1,7 @@
 package Adapters;
 
 import Bussines.Abstract.ICheckPersonService;
-import Entities.User;
+import Entities.Concrete.User;
 
 public class MernisCheckPersonManager implements ICheckPersonService {
     @Override

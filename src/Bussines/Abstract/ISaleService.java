@@ -1,6 +1,6 @@
 package Bussines.Abstract;
 
-import Entities.Sale;
+import Entities.Concrete.Sale;
 
 public interface ISaleService extends  ICrudService<Sale> {
 }

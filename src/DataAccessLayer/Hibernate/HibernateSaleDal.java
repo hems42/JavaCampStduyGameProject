@@ -1,7 +1,7 @@
 package DataAccessLayer.Hibernate;
 
 import DataAccessLayer.Abstract.ISaleDal;
-import Entities.Sale;
+import Entities.Concrete.Sale;
 
 public class HibernateSaleDal implements ISaleDal {
 

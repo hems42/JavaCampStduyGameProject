@@ -1,6 +1,6 @@
 package Bussines.Abstract;
 
-import Entities.User;
+import Entities.Concrete.User;
 
 public interface ICheckPersonService {
 
