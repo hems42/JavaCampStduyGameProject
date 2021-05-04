@@ -1,6 +1,8 @@
 package Entities;
 
-public class Campaign {
+import Entities.Abstract.IEntity;
+
+public class Campaign implements IEntity {
 
     private int id;
     private String  name;

@@ -1,6 +1,8 @@
 package Entities;
 
-public class User {
+import Entities.Abstract.IEntity;
+
+public class User  implements IEntity {
     private  int id;
     private  String name;
     private  String surname;
@@ -25,6 +27,10 @@ public class User {
 
     public String getName() {
         return name;
+    }
+
+    public String getFullName() {
+        return name+" "+surname;
     }
 
     public void setName(String name) {

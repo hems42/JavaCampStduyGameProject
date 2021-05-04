@@ -1,6 +1,8 @@
 package Entities;
 
-public class Game {
+import Entities.Abstract.IEntity;
+
+public class Game implements IEntity {
 
     private int id;
     private String name;
