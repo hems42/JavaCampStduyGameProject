@@ -33,7 +33,7 @@ public class Sale implements IEntity {
     }
 
     public String getDetail() {
-        String det=getGame().getName()+ " isimli oyunun "+ getUser().getName()+ " " + getUser().getSurname()+"  isimli kullanıcıya satışı";
+        String det="SATIŞ ÖZETİ: "+getGame().getName()+ " isimli oyunun "+ getUser().getName()+ " " + getUser().getSurname()+"  isimli kullanıcıya "+ game.getPrice()+" satışı";
         return det;
     }
 

@@ -1,7 +1,7 @@
 package DataAccessLayer.Hibernate;
 
 import DataAccessLayer.Abstract.IGameDal;
-import Entities.Concrete.Campaign;
+import Entities.Abstract.BaseCampaign;
 import Entities.Concrete.Game;
 
 public class HibernateGameDal implements IGameDal {
@@ -19,9 +19,9 @@ public class HibernateGameDal implements IGameDal {
     }
 
     @Override
-    public Game getCampaignedGame(Campaign campaign) {
+    public Game getCampaignedGame(BaseCampaign baseCampaign) {
 
-        Game game1= new Game(campaign);
+        Game game1= new Game(baseCampaign);
         game1.setId(1);
         game1.setName("Shrek Bahçelerde Geziyor");
         game1.setDetail("Shrek aynı bildiğimiz gibi hep hayvan...");

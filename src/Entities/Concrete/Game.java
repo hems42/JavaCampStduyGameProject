@@ -1,5 +1,6 @@
 package Entities.Concrete;
 
+import Entities.Abstract.BaseCampaign;
 import Entities.Abstract.IEntity;
 
 public class Game implements IEntity {
@@ -18,10 +19,10 @@ public class Game implements IEntity {
         this.currencyUnit = currencyUnit;
     }
 
-    private Campaign campaign;
+    private BaseCampaign baseCampaign;
 
-    public Game(Campaign campaign) {
-        this.campaign = campaign;
+    public Game(BaseCampaign baseCampaign) {
+        this.baseCampaign = baseCampaign;
     }
 
     public Game() {
@@ -44,16 +45,19 @@ public class Game implements IEntity {
     }
 
     public double getPrice() {
-        if(campaign!=null)
+        if(baseCampaign !=null)
         {
-            System.out.println(name+ "isimli oyun için "+ campaign.getName() + " kampanyası dahilinde    "+((campaign.getRateOfDiscount()*price)/100) +" "+currencyUnit
+            System.out.println( "FİYAT ÖZETİ:  "+ name+ "  isimli oyun için "+ baseCampaign.getName() +
+                    " kampanyası dahilinde "
+                    +price+" "+currencyUnit
+                    +" yerine "+"(-->%"+baseCampaign.getRateOfDiscount()+"<--) "+((baseCampaign.getRateOfDiscount()*price)/100) +" "+currencyUnit
                     + "indirim ile \n"
-            + " yeni fiyat : "+ (price - ((campaign.getRateOfDiscount() * price) / 100))+" olarak güncellenmiştir" );
+            + " yeni fiyat : "+ (price - ((baseCampaign.getRateOfDiscount() * price) / 100))+" olarak güncellenmiştir" );
         }
         else{
             System.out.println(name+ " isimli oyun için fiyat bilgisi : "+ price+ " "+ currencyUnit + " dir.");
         }
-        return campaign!=null?price-((campaign.getRateOfDiscount()*price)/100): price;
+        return baseCampaign !=null?price-((baseCampaign.getRateOfDiscount()*price)/100): price;
     }
 
     public void setPrice(double price) {

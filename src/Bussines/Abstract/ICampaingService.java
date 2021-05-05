@@ -1,6 +1,6 @@
 package Bussines.Abstract;
 
-import Entities.Concrete.Campaign;
+import Entities.Abstract.BaseCampaign;
 
-public interface ICampaingService extends ICrudService<Campaign> {
+public interface ICampaingService extends ICrudService<BaseCampaign> {
 }

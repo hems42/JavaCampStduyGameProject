@@ -1,8 +1,6 @@
-package Entities.Concrete;
+package Entities.Abstract;
 
-import Entities.Abstract.IEntity;
-
-public class Campaign implements IEntity {
+public abstract class BaseCampaign implements IEntity {
 
     private int id;
     private String  name;

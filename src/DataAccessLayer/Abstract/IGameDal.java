@@ -1,9 +1,9 @@
 package DataAccessLayer.Abstract;
 
-import Entities.Concrete.Campaign;
+import Entities.Abstract.BaseCampaign;
 import Entities.Concrete.Game;
 
 public interface IGameDal extends ICrudDal<Game> {
 
-    Game getCampaignedGame(Campaign campaign);
+    Game getCampaignedGame(BaseCampaign baseCampaign);
 }

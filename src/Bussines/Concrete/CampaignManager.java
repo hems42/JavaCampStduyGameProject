@@ -1,9 +1,8 @@
 package Bussines.Concrete;
 
 import Bussines.Abstract.ICampaingService;
-
 import DataAccessLayer.Abstract.ICampaignDal;
-import Entities.Concrete.Campaign;
+import Entities.Abstract.BaseCampaign;
 import Logger.Abstract.BaseLogger;
 
 public class CampaignManager implements ICampaingService {
@@ -20,36 +19,36 @@ public class CampaignManager implements ICampaingService {
     }
 
     @Override
-    public void add(Campaign campaign) {
-         useLog("eklendi",campaign);
+    public void add(BaseCampaign baseCampaign) {
+         useLog("eklendi", baseCampaign);
 
     }
 
     @Override
-    public void delete(Campaign campaign) {
-        useLog("silindi",campaign);
+    public void delete(BaseCampaign baseCampaign) {
+        useLog("silindi", baseCampaign);
 
     }
 
     @Override
-    public void update(Campaign campaign) {
-        useLog("güncellendi",campaign);
+    public void update(BaseCampaign baseCampaign) {
+        useLog("güncellendi", baseCampaign);
 
     }
 
     @Override
-    public void get(Campaign campaign) {
-        useLog("getirildi",campaign);
+    public void get(BaseCampaign baseCampaign) {
+        useLog("getirildi", baseCampaign);
 
     }
 
-    private void useLog(String  logMessage,Campaign campaign)
+    private void useLog(String  logMessage, BaseCampaign baseCampaign)
     {
         for(BaseLogger logger:loggers)
         {
-            logger.log(campaign.getName()+" isimli kampanya "+logMessage);
+            logger.log(baseCampaign.getName()+" isimli kampanya "+logMessage);
         }
 
-        System.out.println(campaign.getName()+ " isimli kampanya " +logMessage);
+        System.out.println(baseCampaign.getName()+ " isimli kampanya " +logMessage);
     }
 }

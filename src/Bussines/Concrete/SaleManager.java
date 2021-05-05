@@ -1,17 +1,17 @@
 package Bussines.Concrete;
 
 import Bussines.Abstract.ISaleService;
-import DataAccessLayer.Abstract.ICampaignDal;
+import DataAccessLayer.Abstract.ISaleDal;
 import Entities.Concrete.Sale;
 import Logger.Abstract.BaseLogger;
 
 public class SaleManager implements ISaleService {
 
-    private ICampaignDal iCampaignDal;
+    private ISaleDal iSaleDal;
     private BaseLogger [] loggers;
 
-    public SaleManager(ICampaignDal iCampaignDal, BaseLogger[] loggers) {
-        this.iCampaignDal = iCampaignDal;
+    public SaleManager(ISaleDal iSaleDal, BaseLogger[] loggers) {
+        this.iSaleDal = iSaleDal;
         this.loggers = loggers;
     }
 
@@ -22,7 +22,7 @@ public class SaleManager implements ISaleService {
 
     @Override
     public void delete(Sale sale) {
-        useLog("silindis",sale);
+        useLog("silindi",sale);
 
     }
 

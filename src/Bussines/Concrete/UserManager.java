@@ -1,22 +1,32 @@
 package Bussines.Concrete;
 
+import Bussines.Abstract.ICheckPersonService;
 import Bussines.Abstract.IUserService;
-import DataAccessLayer.Abstract.ICampaignDal;
+import DataAccessLayer.Abstract.IUserDal;
 import Entities.Concrete.User;
 import Logger.Abstract.BaseLogger;
 
 public class UserManager implements IUserService {
 
-    private ICampaignDal iCampaignDal;
+    private IUserDal iUserDal;
     private BaseLogger[] loggers;
+    private ICheckPersonService iCheckPersonService;
 
-    public UserManager(ICampaignDal iCampaignDal) {
-        this.iCampaignDal = iCampaignDal;
+    public UserManager(IUserDal iUserDal,BaseLogger [] loggers,ICheckPersonService iCheckPersonService)
+    {    this.loggers=loggers;
+        this.iUserDal = iUserDal;
+        this.iCheckPersonService=iCheckPersonService;
     }
 
     @Override
     public void add(User user) {
-        useLog("eklendi",user);
+
+        if(iCheckPersonService.isValidPerson(user))
+        {
+            useLog("kaydedildi",user);
+        }
+
+
 
     }
 
@@ -47,5 +57,6 @@ public class UserManager implements IUserService {
         }
 
         System.out.println(user.getFullName()+" isimli kullanıcı "+logMessage);
+
     }
 }

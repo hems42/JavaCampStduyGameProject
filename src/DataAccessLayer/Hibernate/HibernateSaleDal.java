@@ -14,7 +14,7 @@ public class HibernateSaleDal implements ISaleDal {
     @Override
     public void update(Sale sale) {
 
-        System.out.println(sale.getDetail()+ " güncelleni");
+        System.out.println(sale.getDetail()+ " güncellendi");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package DataAccessLayer.Abstract;
 
-import Entities.Concrete.Campaign;
+import Entities.Abstract.BaseCampaign;
 
-public interface ICampaignDal extends ICrudDal<Campaign> {
+public interface ICampaignDal extends ICrudDal<BaseCampaign> {
 }
